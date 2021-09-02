@@ -1,0 +1,1017 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://autoconsumes.github.io/Anexo_IV_Ejemplos/">
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>Mecanismo de compensación de excedentes - E3. Estudios de Eficiencia Energetica.</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/ansi-colours.css">
+    
+      <link rel="stylesheet" href="../css/jupyter-cells.css">
+    
+      <link rel="stylesheet" href="../css/pandas-dataframe.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mecanismo-de-compensacion-de-excedentes" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="E3. Estudios de Eficiencia Energetica." class="md-header__button md-logo" aria-label="E3. Estudios de Eficiencia Energetica." data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            E3. Estudios de Eficiencia Energetica.
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mecanismo de compensación de excedentes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="E3. Estudios de Eficiencia Energetica." class="md-nav__button md-logo" aria-label="E3. Estudios de Eficiencia Energetica." data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    E3. Estudios de Eficiencia Energetica.
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Indice
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Mecanismo de compensación de excedentes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Mecanismo de compensación de excedentes
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introduccion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d1-autoconsumo-individual-con-excedentes-y-con-compensacion-conectada-en-red-interior" class="md-nav__link">
+    "D.1 Autoconsumo individual CON excedentes y CON compensación, conectada en RED INTERIOR"
+  </a>
+  
+    <nav class="md-nav" aria-label=""D.1 Autoconsumo individual CON excedentes y CON compensación, conectada en RED INTERIOR"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentacion-necesaria" class="md-nav__link">
+    Documentación necesaria
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contrato-compensacion-excedentes" class="md-nav__link">
+    Contrato Compensación Excedentes:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacion-de-modalidad-de-autoconsumo-y-envio-contrato-de-compensacion-excedentes" class="md-nav__link">
+    Comunicación de modalidad de autoconsumo y envío Contrato de Compensación Excedentes:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona-la-compensacion" class="md-nav__link">
+    ¿Cómo funciona la compensación?
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Cómo funciona la compensación?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-del-ahorro-alcanzable" class="md-nav__link">
+    Ejemplo del ahorro alcanzable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-tener-en-cuenta" class="md-nav__link">
+    A tener en cuenta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d2-autoconsumo-colectivo-con-o-sin-excedentes-y-con-compensacion-con-todos-los-consumidores-conectados-en-red-interior" class="md-nav__link">
+    D.2 "Autoconsumo colectivo CON o SIN excedentes y CON compensación, con todos los consumidores conectados en RED INTERIOR"
+  </a>
+  
+    <nav class="md-nav" aria-label="D.2 "Autoconsumo colectivo CON o SIN excedentes y CON compensación, con todos los consumidores conectados en RED INTERIOR"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentacion-necesaria_1" class="md-nav__link">
+    Documentación necesaria
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona-la-compensacion_1" class="md-nav__link">
+    ¿Cómo funciona la compensación?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-del-ahorro-alcanzable_1" class="md-nav__link">
+    Ejemplo del ahorro alcanzable
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo del ahorro alcanzable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-tener-en-cuenta_1" class="md-nav__link">
+    A tener en cuenta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d3-autoconsumo-colectivo-con-excedentes-y-con-compensacion-a-traves-de-red-con-al-menos-un-consumidor-conectado-en-red-interior" class="md-nav__link">
+    D.3 "Autoconsumo colectivo CON excedentes y CON compensación, A TRAVÉS DE RED con al menos un consumidor conectado en RED INTERIOR"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Factura_Luz/" class="md-nav__link">
+        Factura de la luz
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Instalacion_FV/" class="md-nav__link">
+        Instalacion FV
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/" class="md-nav__link">
+        Funcionamiento de la aplicacion
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introduccion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d1-autoconsumo-individual-con-excedentes-y-con-compensacion-conectada-en-red-interior" class="md-nav__link">
+    "D.1 Autoconsumo individual CON excedentes y CON compensación, conectada en RED INTERIOR"
+  </a>
+  
+    <nav class="md-nav" aria-label=""D.1 Autoconsumo individual CON excedentes y CON compensación, conectada en RED INTERIOR"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentacion-necesaria" class="md-nav__link">
+    Documentación necesaria
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contrato-compensacion-excedentes" class="md-nav__link">
+    Contrato Compensación Excedentes:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacion-de-modalidad-de-autoconsumo-y-envio-contrato-de-compensacion-excedentes" class="md-nav__link">
+    Comunicación de modalidad de autoconsumo y envío Contrato de Compensación Excedentes:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona-la-compensacion" class="md-nav__link">
+    ¿Cómo funciona la compensación?
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Cómo funciona la compensación?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-del-ahorro-alcanzable" class="md-nav__link">
+    Ejemplo del ahorro alcanzable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-tener-en-cuenta" class="md-nav__link">
+    A tener en cuenta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d2-autoconsumo-colectivo-con-o-sin-excedentes-y-con-compensacion-con-todos-los-consumidores-conectados-en-red-interior" class="md-nav__link">
+    D.2 "Autoconsumo colectivo CON o SIN excedentes y CON compensación, con todos los consumidores conectados en RED INTERIOR"
+  </a>
+  
+    <nav class="md-nav" aria-label="D.2 "Autoconsumo colectivo CON o SIN excedentes y CON compensación, con todos los consumidores conectados en RED INTERIOR"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentacion-necesaria_1" class="md-nav__link">
+    Documentación necesaria
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona-la-compensacion_1" class="md-nav__link">
+    ¿Cómo funciona la compensación?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-del-ahorro-alcanzable_1" class="md-nav__link">
+    Ejemplo del ahorro alcanzable
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo del ahorro alcanzable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-tener-en-cuenta_1" class="md-nav__link">
+    A tener en cuenta
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d3-autoconsumo-colectivo-con-excedentes-y-con-compensacion-a-traves-de-red-con-al-menos-un-consumidor-conectado-en-red-interior" class="md-nav__link">
+    D.3 "Autoconsumo colectivo CON excedentes y CON compensación, A TRAVÉS DE RED con al menos un consumidor conectado en RED INTERIOR"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enlaces" class="md-nav__link">
+    Enlaces
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="mecanismo-de-compensacion-de-excedentes">Mecanismo de compensación de excedentes</h1>
+<p>(fuente: <a href="https://www.idae.es/publicaciones/guia-profesional-de-tramitacion-del-autoconsumo">Guía profesional de tramitación del autoconsumo </a>.-Anexo IV: Ejemplos)</p>
+<details><summary>Introduccion</summary><h2 id="introduccion">Introduccion</h2>
+<p>En este anexo se presentan ejemplos de varias configuraciones de instalaciones de autoconsumo
+tanto individual como colectivo a las que se aplica el mecanismo de compensación de excedentes,
+mostrando el funcionamiento del mecanismo de compensación para ilustrar los ahorros que
+podrían conseguirse con su aplicación.
+Debe tener en cuenta que los ejemplos se realizan con la estructura actual de la tarifa eléctrica y
+aplicando los peajes y cargos existentes en este momento. [ Actualmente se está revisando el REBT, en particular lo referente a las ITC-BT-12 e ITC-BT-40 para adaptarloa los requisitos de autoconsumo. Los ejemplos que se muestran en esta Guía se realizan únicamente a efectosdemostrativos sin perjuicio de los esquemas que finalmente sean aprobados.]</p>
+</details>
+<details><summary>D.1 Autoconsumo individual CON excedentes y CON compensación, conectada en RED INTERIOR</summary><h2 id="d1-autoconsumo-individual-con-excedentes-y-con-compensacion-conectada-en-red-interior">"D.1 Autoconsumo individual CON excedentes y CON compensación, conectada en RED INTERIOR"</h2>
+<p>En esta configuración existe un único consumidor asociado a la instalación en autoconsumo que, mientras tenga demanda, utilizará toda la energía producida por la instalación (fotovoltaica en el ejemplo) en cada momento. </p>
+<p>Existirán dos sujetos: productor y consumidor que podrán ser personas físicas o jurídicas diferentes.
+Será necesario firmar un contrato de compensación de excedentes y comunicarlo a la compañía distribuidora, aunque el productor y el consumidor sean la misma persona física o
+jurídica. El propietario de la instalación, podrá ser una persona física o jurídica diferente del productor y del consumidor. En aquellos momentos en que no precise utilizar toda la energía producida por la instalación de autoconsumo, los excedentes se volcarán a la red de distribución/transporte y se compensarán al
+final del mes.</p>
+<p><img alt="image-20210730220519513" src="../Anexo_IV_Ejemplos.assets/image-20210730220519513.png" /></p>
+<h3 id="documentacion-necesaria">Documentación necesaria</h3>
+<h3 id="contrato-compensacion-excedentes">Contrato Compensación Excedentes:</h3>
+<p>PRODUCTOR – CONSUMIDOR 1</p>
+<h3 id="comunicacion-de-modalidad-de-autoconsumo-y-envio-contrato-de-compensacion-excedentes">Comunicación de modalidad de autoconsumo y envío Contrato de Compensación Excedentes:</h3>
+<p>CONSUMIDOR 1 - DISTRIBUIDORA/COMERCIALIZADORA</p>
+<h3 id="como-funciona-la-compensacion">¿Cómo funciona la compensación?</h3>
+<p>En ciertas horas, cuando su consumo coincida con la generación fotovoltaica, el consumidor no
+necesitará comprar energía a la red de forma que utilizará toda la energía generada por su
+instalación de autoconsumo.
+En otras horas, cuando su consumo sea inferior a la energía generada (ENG h) la energía sobrante
+se volcará a la red como excedente, y habrá horas en que su consumo sea superior a la
+generación y por tanto deba comprar energía de la red.
+A final del periodo de facturación, la distribuidora leerá el contador de suministro, que será
+bidireccional y que por tanto registrará tanto la energía consumida de la red como la energía
+excedentaria vertida a la red. La distribuidora proporcionará a la comercializadora (CoR o libre)
+toda la información de lectura necesaria para realizar la facturación y la compensación.
+A la hora de realizar la facturación la comercializadora calculará el valor de la energía comprada a
+la red (valorada a precio PVPC o a precio de mercado libre según el contrato de suministro que
+tenga el consumidor), y le restará el valor de la energía vertida a la red como excedente (a precio
+de mercado menos los desvíos o al precio acordado con la comercializadora también según sea el
+contrato de suministro del consumidor).</p>
+<h4 id="ejemplo-del-ahorro-alcanzable">Ejemplo del ahorro alcanzable</h4>
+<p>Es posible simular los ahorros que podrían alcanzarse con una instalación en autoconsumo en esta
+configuración individual CON excedentes y CON compensación conectada en red interior.
+Por simplificación se supone que el usuario tiene un contrato de suministro con una
+comercializadora de referencia (CoR) con tarifa 2.0A a precio PVPC, de manera que los precios
+utilizados en la simulación corresponden a medias horarias ponderadas del PVPC.
+En este ejemplo el precio medio PVPC asciende a 113,965 €/MWh (donde 69,37 €/MWh son el
+coste de energía y 44,03 €/MWh el peaje de acceso). Los valores del PVPC para cada hora pueden
+consultarse en la página web de Red Eléctrica de España (REE).
+Así, aplicando el mecanismo del artículo 14 del RD244/2019, al tener el contrato de suministro a
+PVPC, los excedentes de este consumidor se valorarán al precio del mercado menos los desvíos.
+Tomaremos un valor medio de 52 €/MWh para el mercado y 50 €/MWh para los excedentes.
+En esta simulación se supone también que el consumidor utiliza parte de la energía generada por
+la instalación fotovoltaica (FV), pero no es capaz de adaptar por completo su demanda con la
+curva de generación solar y por ello, solo consigue que el 30% de su consumo proceda de la
+fotovoltaica. Es decir, su coeficiente de simultaneidad entre su consumo y la generación será del
+30%; por tanto, en algunas horas se generan excedentes ya que el consumidor no es capaz de
+aprovechar la totalidad de esa energía generada.
+Por último conviene recordar que al realizar la compensación de los excedentes, la cuantía a
+descontar nunca podrá superar el valor económico de la energía consumida de la red.</p>
+<p>En el ejemplo, el consumidor 1 antes de instalar su instalación de autoconsumo recibirá
+mensualmente una factura eléctrica como la siguiente:</p>
+<p><img alt="image-20210730222044773" src="../Anexo_IV_Ejemplos.assets/image-20210730222044773.png" /></p>
+<p>Si este consumidor decide instalar una instalación de autoconsumo CON excedentes y acogerse a
+compensación, podemos realizar un análisis horario de sus consumos, autoconsumos y
+generación de excedentes, que será de la siguiente forma:</p>
+<p><img alt="image-20210731005858429" src="../Anexo_IV_Ejemplos.assets/image-20210731005858429.png" /></p>
+<p>El encargado de la lectura realiza en cada hora un saldo neto horario entre los consumos de red y
+los excedentes, de manera que en una hora solo podrá haber excedentes o consumo de red,
+independientemente de los flujos reales de energía que se hayan producido en esa hora. Es
+decir, si la suma de excedentes en esa hora supera a la suma de los consumos, se asignará a esa
+hora el saldo neto excedentario, mientras que si los consumos de red superan a los excedentes en
+esa hora se asignará el saldo neto consumidor de red.
+Este proceso se repetirá para todas las horas, de forma que al finalizar el periodo de facturación
+(máximo 1 mes) se realizará la compensación de consumos de red y excedentes a los precios que
+sean aplicables según el contrato del consumidor, y se generará una factura como la siguiente:</p>
+<p><img alt="image-20210731010114696" src="../Anexo_IV_Ejemplos.assets/image-20210731010114696.png" /></p>
+<p>En el ejemplo, se ha supuesto que al final del
+periodo de facturación, el consumidor ha reducido
+su consumo de la red desde los 400 kWh iniciales
+a solo 280 kWh ya que ha consumido el resto
+(120kWh) de la instalación de autoconsumo.
+Esos 280 kWh se pagan a precio PVPC.
+Por otro lado, se han generado 380 kWh de
+excedentes en ese mismo periodo, que se
+compensan al precio descrito para excedentes.
+Nótese que el valor de la compensación (19,00 €)
+no podría superar el valor del coste de la energía
+comprada en el mismo periodo (19,32 €).
+En este caso la “cuantía por uso de red próxima”
+no sería de aplicación ya que se trata de una
+instalación conectada en red interior. [ En virtud del artículo 17.5 del RD 244/2019, la CMNC determinará la cuantía por la utilización de la red que
+deban satisfacer los consumidores, en el caso en que se produzca transferencia de energía a través de la red
+de distribución en instalaciones próximas a efectos de autoconsumo]
+El ahorro en la factura eléctrica con autoconsumo
+(41,79 €) respecto de la factura sin instalación de
+autoconsumo (83,21 €) alcanza el 50%.</p>
+<p>Si en lugar de optar por acogerse al mecanismo de compensación, este mismo consumidor con la
+misma instalación de autoconsumo decidiese cambiar de modalidad y pasar a una instalación
+CON excedentes pero NO ACOGIDA a compensación, es decir, a vender los excedentes en el
+mercado, también se pueden simular los ahorros alcanzables</p>
+<p>Por un lado, el consumidor recibe una factura eléctrica con menor consumo de la red ya que,
+siguiendo el ejemplo anterior reduce la compra de energía a 280 kWh (autoconsume los mismos
+120 kWh) que antes. Como ya no tiene compensación, no se le descuenta el valor de los 380 kW
+de excedentes y tampoco le aplica el término referente a la cuantía.</p>
+<p>Por otro lado, el productor venderá esos excedentes (380 kWh) al mercado a través de un
+representante y se obtendrá por ellos el precio del mercado horario que corresponda (52€/kWh
+en el ejemplo) y por esos servicios de representación se abonará un importe según el contrato.
+Además el productor deberá hacerse cargo de las obligaciones fiscales/tributarias que le apliquen
+como el pago del IVPEE del 7% sobre el valor de la energía producida y los costes por retribución
+del operador del sistema (OS), que se aplicarán sobre los 380kWh vendidos.</p>
+<p><img alt="image-20210731011130256" src="../Anexo_IV_Ejemplos.assets/image-20210731011130256.png" /></p>
+<p>En este caso, si el consumidor y el productor son la misma persona, por un lado se abonará la
+factura de consumo una vez tomado en cuenta el valor de la compensación de los excedentes (1.)
+y por otro lado se recibirá el importe de la venta (2.). A esa venta habrá que restarle los costes
+ocasionados por la actividad de venta en el mercado (3. y 4.)
+Así, el ahorro neto que se obtiene al introducir la instalación en autoconsumo alcanza el 47% si lo
+comparamos con la factura eléctrica original sin instalación de autoconsumo (83,21€).</p>
+<h4 id="a-tener-en-cuenta">A tener en cuenta</h4>
+<p>Para lograr el máximo ahorro en el término variable de la factura es necesario que la instalación
+de autoconsumo se dimensione adecuadamente, de forma que sea capaz de cubrir las
+necesidades del consumidor. En el ejemplo, el consumidor tiene un consumo de 400 kWh y la
+instalación se dimensiona para que produzca por encima de esa cantidad hasta 500 kWh.
+Pero es aún más importante que el consumidor adapte su demanda a la curva de producción de la
+instalación generadora, de manera que maximice el autoconsumo instantáneo de la energía FV y
+por tanto genere los mínimos excedentes posibles.</p>
+<p>En el ejemplo, el consumidor realmente sólo es capaz de autoconsumir el 30% de sus necesidades
+de consumo. Si por el contrario el consumidor fuese capaz de modificar su perfil de demanda (por
+ejemplo cambiando hábitos de consumo y desplazando su consumo a los momentos de mayor
+generación fotovoltaica) el ahorro sería mucho mayor; si la energía autoconsumida fuera el total
+de la producción FV (500 kWh), tendríamos el máximo ahorro en la factura (más del 60%).</p>
+<p>Recuerde que el productor y el consumidor pueden ser personas físicas o jurídicas diferentes y
+que, en caso de que se opte por la venta al mercado de los excedentes, será el productor quien
+recibirá los ingresos de la venta y quien deberá hacerse cargo de los costes y obligaciones que
+acompañen a dicha venta.</p>
+</details>
+<details><summary>Autoconsumo colectivo CON o SIN excedentes y CON compensación, con todos los consumidores conectados en RED INTERIOR</summary><h2 id="d2-autoconsumo-colectivo-con-o-sin-excedentes-y-con-compensacion-con-todos-los-consumidores-conectados-en-red-interior">D.2 "Autoconsumo colectivo CON o SIN excedentes y CON compensación, con todos los consumidores conectados en RED INTERIOR"</h2>
+<p>En esta configuración existen varios consumidores
+asociados. La conexión se realiza en la red interior,
+aguas arriba del contador de suministro de cada
+consumidor.
+En esta conexión se respetan las limitaciones para
+edificios sujetos a la LPH, puesto que la instalación se
+conecta en red interior pero no directamente a los
+consumidores.
+En la modalidad CON excedentes existirán dos
+sujetos: productor y consumidores, que podrán ser
+personas físicas o jurídicas diferentes. En la
+modalidad SIN excedentes no existe productor.
+La instalación de autoconsumo (FV en el ejemplo)
+dispone de un contador bidireccional de generación
+neta. Cada consumidor asociado dispone únicamente
+de un contador, que será el de suministro, que
+registrará la medida de toda la energía que llega a
+cada consumidor. En la modalidad SIN excedentes
+existe un sistema antivertido, que impide la cesión de
+energía a la red.</p>
+<p><img alt="image-20210731011629225" src="../Anexo_IV_Ejemplos.assets/image-20210731011629225.png" /></p>
+<p>Para poder acogerse a compensación la instalación de generación debe ser renovable y de P≤100
+kW. Además, los consumos de servicios auxiliares deberán ser despreciables por lo que deberán
+cumplirse las tres condiciones del artículo 3j) del RD244/2019.</p>
+<h3 id="documentacion-necesaria_1">Documentación necesaria</h3>
+<p>Al ser una instalación de autoconsumo colectivo, es necesario que los consumidores asociados
+firmen un acuerdo con los criterios de reparto de la energía en función de las (ß) que se acuerden.
+Adicionalmente, al querer acogerse a compensación, será necesario firmar un contrato de
+compensación simplificada entre productor y consumidores o un acuerdo de compensación
+simplificada entre los consumidores, según sea CON o SIN excedentes, que contenga el mismo
+acuerdo de reparto de la energía anterior.
+Ambos documentos deben remitirse a la compañía distribuidora de forma individual por cada
+consumidor y se le comunicará la modalidad de autoconsumo elegida.</p>
+<p><img alt="image-20210731012915591" src="../Anexo_IV_Ejemplos.assets/image-20210731012915591.png" /></p>
+<h3 id="como-funciona-la-compensacion_1">¿Cómo funciona la compensación?</h3>
+<p>A final de mes, la distribuidora leerá el contador de generación neta horaria de la instalación de
+autoconsumo (ENGh) y proporcionará a la comercializadora toda la información necesaria para
+realizar la facturación y la compensación.
+La comercializadora se encargará de realizar la facturación y la compensación de los excedentes a
+cada consumidor individualmente, a partir de esa información y lo hará para cada hora dentro del
+periodo de facturación.
+Así para cada hora, la distribuidora:</p>
+<ul>
+<li>Asigna la energía generada por la FV a cada consumidor en función de las ß fijas
+  comunicadas:  <span class="arithmatex">\(ENG_{h,i} = ß_i * ENG_h\)</span>.</li>
+<li>Compara la energía horaria individualizada <span class="arithmatex">\(ENG_{h,i}\)</span> que le corresponde a cada usuario con la
+  lectura horaria de su contador individual de suministro (energía horaria consumida
+  individualizada).
+  Si la energía horaria consumida individualizada (en esa hora) es superior a la <span class="arithmatex">\(ENG_{h,i}\)</span> entonces
+  el autoconsumo horario individualizado (<span class="arithmatex">\(Eaut_{h,i}\)</span>) será la <span class="arithmatex">\(ENG_{h,i}\)</span>.
+  Con ello, lo que factura por energía consumida de la red (en esa hora) será la lectura horaria
+  del contador menos <span class="arithmatex">\(ENG_{h,i}\)</span>.
+  Si la energía horaria consumida individualizada es inferior a la <span class="arithmatex">\(ENG_{h,i}\)</span> entonces lo que factura
+  por energía de red (en esa hora) será 0 kWh, según se detalla en el Anexo I del RD 244/2019.</li>
+<li>En las horas en las que no se consume toda la energía generada individualizada <span class="arithmatex">\(ENG_{h,i}\)</span> se
+  generarán excedentes que serían susceptibles de ser compensados.</li>
+</ul>
+<p>A final de mes tendremos un cierto consumo de red para cada consumidor, ya que habrá horas en
+que <span class="arithmatex">\(ENG_{h,i}\)</span> no cubra el consumo horario individualizado. Todos los consumos horarios se suman.
+Por otro lado se habrán generado excedentes, ya que habrá horas en que <span class="arithmatex">\(ENG_{h,i}\)</span> es mayor que el
+consumo horario individualizado, de manera que todos los excedentes horarios se valoran a su
+correspondiente precio horario y su valor se suma.
+Los excedentes totales de cada consumidor asociado se compensarán en su factura de consumo
+eléctrico, al final del periodo de facturación.</p>
+<h3 id="ejemplo-del-ahorro-alcanzable_1">Ejemplo del ahorro alcanzable</h3>
+<p>Es posible simular los ahorros que podrían alcanzarse con una instalación en autoconsumo en una
+configuración colectiva SIN excedentes y CON compensación con todos los usuarios conectados
+en RED INTERIOR.
+Por simplificación se supone que existen dos usuarios y que ambos tienen un contrato de
+suministro con una comercializadora de referencia a PVPC, de manera que los precios utilizados
+en la simulación corresponden a medias horarias ponderadas del PVPC.
+En el ejemplo se utiliza el mismo el precio medio PVPC del apartado anterior de 113,39 €/MWh
+(incluido peaje).
+Al suponer que ambos consumidores tienen contratado el suministro con una comercializadora
+de referencia, el RD 244/2019 marca el precio al que deben ser valorados los excedentes que será
+el precio medio del mercado diario e intradiario menos los desvíos. En el ejemplo tomamos para
+este valor una cifra de 50 €/MWh.
+Para el reparto de energía entre los consumidores asociados, se asignan los mismos ß para ambos
+consumidores, ya que se ha supuesto que el criterio de reparto se realiza siguiendo la propuesta
+del Anexo I del RD 244/2019 y que ambos consumidores tienen la misma potencia contratada
+(5,75 kW), pero los ß podrían ser distintos si los consumidores acuerdan coeficientes distintos.
+En el ejemplo, los consumidores 1 y 2 antes de instalar su instalación de autoconsumo
+recibirán mensualmente sendas facturas eléctricas como las siguientes:</p>
+<p><img alt="image-20210731015510036" src="../Anexo_IV_Ejemplos.assets/image-20210731015510036.png" /></p>
+<p><img alt="image-20210731015523209" src="../Anexo_IV_Ejemplos.assets/image-20210731015523209.png" /></p>
+<p>En este ejemplo, los consumidores deciden instalar una instalación de autoconsumo SIN
+excedentes (dotada de un sistema antivertido) y acogerse a compensación.
+Suponemos además que ambos consumidores tienen la misma potencia contratada y acuerdan el
+coeficiente ß = 0,50.
+Al tratarse de una instalación SIN excedentes, la producción se adaptará a los consumos
+existentes en cada momento, ya que nunca puede volcarse energía a la red.</p>
+<p><img alt="image-20210731113546217" src="../Anexo_IV_Ejemplos.assets/image-20210731113546217.png" /></p>
+<p>Al igual que en el ejemplo anterior, podemos realizar un análisis horario de los consumos,
+autoconsumos y generación de excedentes, que será de la siguiente forma:</p>
+<p><img alt="image-20210731114130289" src="../Anexo_IV_Ejemplos.assets/image-20210731114130289.png" /></p>
+<p>Este proceso se repetirá para todas las horas, de forma que al finalizar el periodo de facturación
+se realizará la compensación de consumos de red y excedentes a los precios que sean aplicables
+según el contrato de cada consumidor, y se recibirán unas facturas como las siguientes:</p>
+<p><img alt="image-20210731115234305" src="../Anexo_IV_Ejemplos.assets/image-20210731115234305.png" /></p>
+<h4 id="a-tener-en-cuenta_1">A tener en cuenta</h4>
+<p>La instalación generadora debe estar ajustada para que su generación pueda cubrir los consumos
+totales de los consumidores asociados.
+En este caso, al tratarse de una instalación SIN excedentes, el dimensionamiento adecuado toma
+mayor importancia, puesto que la generación se adaptará al consumo por existir un mecanismo
+anti-vertido, de manera que si no hay consumo no habrá generación.
+La generación en cada hora será como máximo el consumo total de los consumidores conectados
+aguas abajo de la generación, ya que es posible que en algún momento de esa hora la generación
+no sea capaz de suministrar la energía demandada.
+Lo ideal es que los consumidores acomoden su demanda a la generación FV, de manera que se
+maximice el autoconsumo, puesto que es ahí donde se encuentra el ahorro más importante de la
+factura. Cuanto más consumo horario se case con la generación horaria FV, mayor será el ahorro.
+En este ejemplo el consumidor 1 consigue un ahorro del 38%, frente a un ahorro del 29% del
+consumidor 2, debido a su mejor gestión de la demanda (maximizando el autoconsumo) lo que
+implica menores excedentes.</p>
+</details>
+<details><summary>Autoconsumo colectivo CON excedentes y CON compensación, A TRAVÉS DE RED con al menos un consumidor conectado en RED INTERIOR</summary><h2 id="d3-autoconsumo-colectivo-con-excedentes-y-con-compensacion-a-traves-de-red-con-al-menos-un-consumidor-conectado-en-red-interior">D.3 "Autoconsumo colectivo CON excedentes y CON compensación, A TRAVÉS DE RED con al menos un consumidor conectado en RED INTERIOR"</h2>
+<p>En esta configuración existen varios consumidores asociados que se conectan a la instalación a
+través de la red de distribución. Sin embargo, la instalación generadora se conecta a la red interior
+(que incluye las instalaciones de enlace) de, como mínimo, uno de los consumidores asociados.
+Al ser modalidad CON excedentes, existirán dos sujetos: productor y consumidores, que podrán ser
+personas físicas o jurídicas diferentes. La instalación de autoconsumo (FV en el ejemplo)
+dispone de un contador bidireccional de generación neta. Cada consumidor asociado dispone únicamente
+de un contador, que será el de suministro, que registrará la medida de toda la energía que llega a
+cada consumidor. Al tratarse de un autoconsumo colectivo, los consumidores asociados deberán acordar el criterio de reparto de la energía que se genere y firmar el correspondiente “acuerdo de reparto” donde figure el coeficiente β que le corresponde para cada consumidor. Este acuerdo se remitirá a la distribuidora.</p>
+<p><img alt="image-20210731115424663" src="../Anexo_IV_Ejemplos.assets/image-20210731115424663.png" /></p>
+<p>Esta configuración representa un autoconsumo colectivo donde la instalación generadora se ubica
+en un edificio (polideportivo en el ejemplo), y se conecta en su red interior. Los consumidores
+asociados se ubican en las cercanías, cumpliendo los criterios de distancia que establece el
+RD244/2019 para los autoconsumos a través de red.
+Además, esta configuración permite que los consumidores se acojan al mecanismo de
+compensación simplificada ya que se pueden cumplir las condiciones descritas en el RD244/2019:</p>
+<ul>
+<li>
+<p>La fuente de energía primaria es renovable: en el ejemplo se cumple al tratarse de
+  generación fotovoltaica.</p>
+</li>
+<li>
+<p>La potencia total no sea superior a 100 kW.</p>
+</li>
+<li>
+<p>El consumidor y productor asociado hayan suscrito un contrato de compensación de
+  excedentes de autoconsumo.</p>
+</li>
+<li>
+<p>La instalación de producción no tenga otorgado un régimen retributivo adicional o
+  específico.</p>
+</li>
+<li>
+<p>Si resultase necesario realizar un contrato de suministro para servicios auxiliares de
+  producción, el consumidor haya suscrito un único contrato de suministro para el consumo
+  asociado y para los consumos auxiliares de producción con una empresa comercializadora,
+  según lo dispuesto en el artículo 9.2 del presente real decreto.
+  En el ejemplo, al tratarse de una instalación fotovoltaica los consumos por servicios
+  auxiliares podrían ser considerados despreciables, no siendo necesario formalizar el
+  contrato de suministro para dichos servicios auxiliares y por tanto, cumpliéndose este
+  apartado.</p>
+</li>
+</ul>
+<p>Para que los consumos auxiliares se puedan considerar despreciables, deberán cumplirse
+  tres condiciones a la vez que aparecen descritas en el artículo 3j) del RD244/2019:</p>
+<ul>
+<li>Sean instalaciones próximas de red interior. En la configuración de nuestro ejemplo, esta condición se cumpliría dado que la
+    instalación se encuentra conectada a la red interior de uno de los consumidores
+    asociados (el polideportivo del ejemplo).
+    Como la generación está conectada a la red interior de al menos uno de los
+    consumidores asociados, se entenderá cumplido el primero de los requisitos para
+    considerar despreciables los servicios auxiliares de producción.
+    Esta interpretación viene refrendada por las preguntas frecuentes (FAQ) publicadas
+    por el Ministerio para la Transición Ecológica y el Reto Demográfico sobre
+    autoconsumo que pueden consultarse en su <a href="https://energia.gob.es/electricidad/autoconsumo-electrico/Paginas/autoconsumo.aspx">página web</a></li>
+<li>Se trate de instalaciones de generación con tecnología renovable destinadas a para
+    suministrar a uno o más consumidores acogidos a cualquiera de las modalidades de
+    autoconsumo y su potencia instalada sea menor de 100 kW.
+    Esta condición se cumpliría para cualquier instalación renovable (FV en el ejemplo)
+    con la potencia inferior a 100kW.</li>
+<li>En cómputo anual, la energía consumida por dichos servicios auxiliares de producción
+    sea inferior al 1 % de la energía neta generada por la instalación.
+    Esta condición se cumpliría para nuestro ejemplo, ya que las instalaciones
+    fotovoltaicas, en líneas generales, presentan consumos auxiliares inferiores a este 1%.</li>
+</ul>
+<p>Estas configuraciones de autoconsumo colectivo a través de red acogidas a compensación
+resultan especialmente interesantes para aplicaciones de índole social en ayuntamientos y
+entidades públicas/privadas como mecanismos de lucha contra la pobreza energética.</p>
+<p>Permiten utilizar espacios que teniendo gran superficie de tejado disponible, pueden compartir la
+generación con otros consumidores que, por ejemplo, no dispusiesen de tejado adecuado o
+estuviesen en situación de pobreza energética. Además, se permite que los consumidores
+compensen sus excedentes haciendo el autoconsumo más atractivo y ampliando, en su caso, el
+carácter social de la instalación.</p>
+<p>Otro ejemplo de esta misma configuración de instalación colectiva CON excedentes conectada A
+TRAVÉS de red y ACOGIDA a compensación, puede verse en la siguiente figura.</p>
+<p>Existen varios consumidores asociados que se conectan a la instalación a través de la red de
+distribución (los dos consumidores en residencias unifamiliares). La instalación generadora se ubica
+en un edificio sujeto a LPH, por lo que se conecta a la red interior, en las instalaciones de enlace de
+esos consumidores.
+La instalación de autoconsumo (FV en el ejemplo) dispone de un contador bidireccional de generación neta y cada consumidor asociado dispone de su contador de suministro. Al tratarse de un autoconsumo colectivo, los consumidores asociados deberán acordar el criterio de reparto en el correspondiente “acuerdo de reparto” donde figuren los coeficientes β. El resto de condiciones se mantienen en este
+ejemplo, por lo que los consumidores “externos” al edificio deberán cumplir los criterios de distancia del artículo 3g).</p>
+<p><img alt="image-20210731120056419" src="../Anexo_IV_Ejemplos.assets/image-20210731120056419.png" /></p>
+<p>Esta configuración al igual que en la de la figura 25, permite que los consumidores se acojan al
+mecanismo de compensación simplificada ya que se pueden cumplir las condiciones descritas en
+el RD244/2019.
+En la configuración de nuestro ejemplo, esta condición se cumpliría dado que la instalación se
+encuentra conectada a la red interior de al menos uno de los consumidores asociados.
+En este ejemplo, la generación se conecta a las instalaciones de enlace del edificio, que a efectos
+del RD244/2019 tienen la consideración de red interior. Así, al estar la generación conectada a la
+red interior de al menos uno de los consumidores asociados, se cumple el primero de los
+requisitos y los servicios auxiliares de producción despreciables se entienden despreciables.
+Cuando además de lo anterior, se cumplan el resto de requisitos regulados en el artículo 3.j) del
+Real Decreto 244/2019, de 5 de abril, no será necesario suscribir un contrato de suministro
+particular para los servicios auxiliares, posibilitando así el cumplimiento de la condición relativa a
+la unicidad de contrato de suministro para poder acogerse a la modalidad de autoconsumo con
+excedentes y compensación.</p>
+</details>
+<details class="enlaces"><summary>Enlaces</summary><h2 id="enlaces">Enlaces</h2>
+<ul>
+<li><a href="https://www.idae.es/publicaciones/guia-profesional-de-tramitacion-del-autoconsumo">Guía profesional de tramitación del autoconsumo </a></li>
+<li><a href="https://energia.gob.es/electricidad/autoconsumo-electrico/Paginas/preguntas-frecuentes-autoconsumo.aspx">Preguntas frecuentes sobre autoconsumo</a></li>
+<li><a href="https://planderecuperacion.gob.es/">Plan de Recuperación, Transformación y Resiliencia</a></li>
+</ul>
+</details>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Pie">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Anterior: Indice" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Indice
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Factura_Luz/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Factura de la luz" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Factura de la luz
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,25 @@
+site_name: E3. Estudios de Eficiencia Energetica.
+site_url: https://autoconsumes.github.io/
+
+theme:
+  name: material
+  language: es
+  favicon: assets/favicon.ico
+  logo: assets/logo.svg
+plugins:
+  - mknotebooks
+  - search
+#  icono "≡"
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+      
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
