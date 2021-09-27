@@ -342,6 +342,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../Instalacion_BATERIAS/" class="md-nav__link">
+        Instalacion BATERIAS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Instalacion_FV/" class="md-nav__link">
         Instalacion FV
       </a>
@@ -359,6 +374,21 @@
     <li class="md-nav__item">
       <a href="../app/" class="md-nav__link">
         Funcionamiento de la aplicacion
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion_EOLICA/" class="md-nav__link">
+        Instalacion EOLICA
       </a>
     </li>
   
@@ -756,10 +786,12 @@ $$
 FP=\sum_{p=1}^{p=i}T_{P_p} * P_{C_p}
 $$</p>
 <p>Donde:</p>
-<p><span class="arithmatex">\(FP\)</span>: Facturación de la potencia
-<span class="arithmatex">\(T_{P_p}\)</span>: Precio del término de potencia del periodo horario p,  expresado en €/kW y año
-$ P_{C_p}$ Potencia contratada en el período horario p , expresada en kW.
-i :Número de periodos horarios de los que consta el término def acturación de potencia del peaje correspondiente.   </p>
+<ul>
+<li><span class="arithmatex">\(FP\)</span>: Facturación de la potencia</li>
+<li><span class="arithmatex">\(T_{P_p}\)</span>: Precio del término de potencia del periodo horario p,  expresado en €/kW y año</li>
+<li><span class="arithmatex">\(P_{C_p}\)</span> Potencia contratada en el período horario p , expresada en kW.</li>
+<li>i :Número de periodos horarios de los que consta el término def acturación de potencia del peaje correspondiente. </li>
+</ul>
 <p><img alt="image-20210902135148933" src="../Factura_Luz.assets/image-20210902135148933.png" /></p>
 <h3 id="62-facturacion-por-energia">6.2. Facturación por energía</h3>
 <p>La Circular 3/2020 establece en el artículo 9.3 que la facturación por energía
@@ -769,15 +801,13 @@ correspondiente, de acuerdo con la fórmula siguiente:</p>
 <p>$$
 FE=\sum_{p=1}^{p=i}T_{e_p} * E_p
 $$
-Donde:
-FE: Facturación por energía, expresada en €
-Te p : Precio del término de energía del periodo horario p , expresado en €/kWh
-E p : Energía consumida o estimada en el período horario p , expresada en kWh.
-En el caso de las importaciones y exportaciones de energía se considerará
-la energía programada en cada periodo horario.
-i:
-Número de periodos horarios de los que consta el término de facturación
-de energía del peaje correspondiente</p>
+Donde:</p>
+<ul>
+<li><span class="arithmatex">\(FE\)</span>: Facturación por energía, expresada en €</li>
+<li><span class="arithmatex">\(T_{e_p}\)</span>: Precio del término de energía del periodo horario p , expresado en €/kWh</li>
+<li><span class="arithmatex">\(E_p\)</span> : Energía consumida o estimada en el período horario p , expresada en kWh. En el caso de las * importaciones   exportaciones de energía se considerará la energía programada en cada periodo horario.</li>
+<li>i:Número de periodos horarios de los que consta el término de facturación de energía del peaje correspondiente</li>
+</ul>
 <p>Siguiendo con el ejemplo anterior, en el Cuadro 7 se muestra la facturación por
 energía activa para tres consumidores, acogidos a los peajes 2.0 TD, 3.0 TD y
 6.1 TD en un mes de temporada alta </p>
@@ -910,21 +940,18 @@ de hora de cada periodo horario, en un mes de temporada alta.</p>
 únicamente se registrará un valor para la potencia demandada en cada uno de
 los periodos, que se corresponderá con la máxima de las potencias demandadas
 en cada uno de los cuartos de hora de cada periodo y, como se ha indicado los</p>
-<p>excesos de potencia se facturarán conforme a la fórmula establecida en el
-artículo 9.4.b.1)</p>
+<p>excesos de potencia se facturarán conforme a la fórmula establecida en el artículo 9.4.b.1)</p>
 <div class="arithmatex">\[
 F_{EP}=\sum_{p=1}^{p=i}t_{e_p} \cdot2\cdot(Pd_p-Pc_P)
 \]</div>
-<p>Donde:
-F EP : Facturación en concepto de excesos de potencia
-t ep : Término de exceso de potencia, expresado en €/kW, del peaje
-correspondiente.
-Pd p : Potencia máxima demandada en cada uno de los períodos
-horario p en que se haya sobrepasado Pc p , expresada en kW.
-Pc p : Potencia contratada en el período horario p , expresada en kW.
-i:
-Número de periodos horarios de los que consta el término de
-facturación de potencia del peaje correspondiente.</p>
+<p>Donde:</p>
+<ul>
+<li><span class="arithmatex">\(F_{EP}\)</span> : Facturación en concepto de excesos de potencia</li>
+<li><span class="arithmatex">\(t_{ep}\)</span> : Término de exceso de potencia, expresado en €/kW, del peaje correspondiente.</li>
+<li><span class="arithmatex">\(Pd_p\)</span> : Potencia máxima demandada en cada uno de los períodos horario p en que se haya sobrepasado Pc p expresada en kW.</li>
+<li><span class="arithmatex">\(Pc_p\)</span> : Potencia contratada en el período horario p , expresada en kW.</li>
+<li><span class="arithmatex">\(i\)</span>:Número de periodos horarios de los que consta el término de facturación de potencia del peaje correspondiente.</li>
+</ul>
 <p>Esto es, para cada uno de los periodos horarios se compara la potencia
 contratada con la potencia máxima demandada en el periodo y en caso de que
 se produzcan excesos se procede a facturar el doble de la diferencia al precio
@@ -1121,13 +1148,13 @@ Cuadro 16).</p>
       
       
         
-        <a href="../Instalacion_FV/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Instalacion FV" rel="next">
+        <a href="../Instalacion_BATERIAS/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Instalacion BATERIAS" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Siguiente
               </span>
-              Instalacion FV
+              Instalacion BATERIAS
             </div>
           </div>
           <div class="md-footer__button md-icon">
