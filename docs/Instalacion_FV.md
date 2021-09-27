@@ -2,7 +2,7 @@
 
 
 
-Fuente: [Pliego de Condiciones Técnicas de Instalaciones Conectadas a Red .PCT-C-REV - julio 2011  (*)](https://www.idae.es/publicaciones/instalaciones-de-energia-solar-fotovoltaica-pliego-de-condiciones-tecnicas-de) y PCT-A-REV - febrero 2009 (**)
+Fuente: [Pliego de Condiciones Técnicas de Instalaciones Conectadas a Red .PCT-C-REV - julio 2011  (*)](https://www.idae.es/publicaciones/instalaciones-de-energia-solar-fotovoltaica-pliego-de-condiciones-tecnicas-de) y [PCT-A-REV - febrero 2009 (**)](./Instalacion_FV.assets/Aisladas. Pliego de condiciones PCT-A_2009.pdf))
 
 
 
