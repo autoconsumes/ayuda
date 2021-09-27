@@ -358,10 +358,10 @@ $$
 
 Donde:
 
-$FP$: Facturación de la potencia
-$T_{P_p}$: Precio del término de potencia del periodo horario p,  expresado en €/kW y año
-$ P_{C_p}$ Potencia contratada en el período horario p , expresada en kW.
-i :Número de periodos horarios de los que consta el término def acturación de potencia del peaje correspondiente.	
+- $FP$: Facturación de la potencia
+- $T_{P_p}$: Precio del término de potencia del periodo horario p,  expresado en €/kW y año
+- $P_{C_p}$ Potencia contratada en el período horario p , expresada en kW.
+- i :Número de periodos horarios de los que consta el término def acturación de potencia del peaje correspondiente.	
 
 
 
@@ -385,14 +385,11 @@ $$
 FE=\sum_{p=1}^{p=i}T_{e_p} * E_p
 $$
 Donde:
-FE: Facturación por energía, expresada en €
-Te p : Precio del término de energía del periodo horario p , expresado en €/kWh
-E p : Energía consumida o estimada en el período horario p , expresada en kWh.
-En el caso de las importaciones y exportaciones de energía se considerará
-la energía programada en cada periodo horario.
-i:
-Número de periodos horarios de los que consta el término de facturación
-de energía del peaje correspondiente
+
+* $FE$: Facturación por energía, expresada en €
+* $T_{e_p}$: Precio del término de energía del periodo horario p , expresado en €/kWh
+* $E_p$ : Energía consumida o estimada en el período horario p , expresada en kWh. En el caso de las * importaciones   exportaciones de energía se considerará la energía programada en cada periodo horario.
+* i:Número de periodos horarios de los que consta el término de facturación de energía del peaje correspondiente
 
 Siguiendo con el ejemplo anterior, en el Cuadro 7 se muestra la facturación por
 energía activa para tres consumidores, acogidos a los peajes 2.0 TD, 3.0 TD y
@@ -571,8 +568,7 @@ en cada uno de los cuartos de hora de cada periodo y, como se ha indicado los
 
 
 
-excesos de potencia se facturarán conforme a la fórmula establecida en el
-artículo 9.4.b.1)
+excesos de potencia se facturarán conforme a la fórmula establecida en el artículo 9.4.b.1)
 
 
 $$
@@ -583,15 +579,12 @@ $$
 
 
 Donde:
-F EP : Facturación en concepto de excesos de potencia
-t ep : Término de exceso de potencia, expresado en €/kW, del peaje
-correspondiente.
-Pd p : Potencia máxima demandada en cada uno de los períodos
-horario p en que se haya sobrepasado Pc p , expresada en kW.
-Pc p : Potencia contratada en el período horario p , expresada en kW.
-i:
-Número de periodos horarios de los que consta el término de
-facturación de potencia del peaje correspondiente.
+
+* $F_{EP}$ : Facturación en concepto de excesos de potencia
+* $t_{ep}$ : Término de exceso de potencia, expresado en €/kW, del peaje correspondiente.
+* $Pd_p$ : Potencia máxima demandada en cada uno de los períodos horario p en que se haya sobrepasado Pc p expresada en kW.
+* $Pc_p$ : Potencia contratada en el período horario p , expresada en kW.
+* $i$:Número de periodos horarios de los que consta el término de facturación de potencia del peaje correspondiente.
 
 
 
