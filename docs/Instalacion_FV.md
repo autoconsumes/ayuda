@@ -1,14 +1,14 @@
-# Instalacion FV
+# Instalacion FV.
 
+[![Placeholder](./img/e_A_CARGA.png){ loading=lazy }](https://eee1-uom5ariccq-ew.a.run.app/estudios/e_A_FV){ .md-button }
 
+??? "Generar Informes"
+    <iframe src="https://eee1-uom5ariccq-ew.a.run.app/e_A_FV" style="position:relative
+    ; top:50px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"> Your browser doesn't support iframes </iframe>
 
 Fuente: [Pliego de Condiciones Técnicas de Instalaciones Conectadas a Red .PCT-C-REV - julio 2011  (*)](https://www.idae.es/publicaciones/instalaciones-de-energia-solar-fotovoltaica-pliego-de-condiciones-tecnicas-de) y [PCT-A-REV - febrero 2009 (**)](./Instalacion_FV.assets/Aisladas. Pliego de condiciones PCT-A_2009.pdf))
 
-
-
 ## ANEXO I DIMENSIONADO DEL SISTEMA FOTOVOLTAICO (**)
-
-
 
 ### I. Estimación del consumo diario de energía
 
