@@ -404,11 +404,6 @@ excedentes y compensación.
 
 
 ## Enlaces
-
-
 - [Guía profesional de tramitación del autoconsumo ](https://www.idae.es/publicaciones/guia-profesional-de-tramitacion-del-autoconsumo)
 - [Preguntas frecuentes sobre autoconsumo](https://energia.gob.es/electricidad/autoconsumo-electricoPaginas/preguntas-frecuentes-autoconsumo.aspx)
 - [Plan de Recuperación, Transformación y Resiliencia](https://planderecuperacion.gob.es/)
-
-
-
