@@ -1,6 +1,22 @@
 # Factura de la luz
 
-fuente: [CNS/DE/1467/20: CONSULTAS VARIAS SOBRE LA IMPLEMENTACIÓN DE LA CIRCULAR 3/2020 DE 15 DE ENERO POR LA QUE SE ESTABLECE LA METODOLOGÍA PARA EL CÁLCULO DE LOS  PEAJES DE TRANSPORTE Y DISTRIBUCIÓN DE ELECTRICIDAD](https://www.cnmc.es/expedientes/cnsde146720) 
+## Informes
+
+??? Abstract "Informe Dimensionado del sistema"
+
+    [![Placeholder](./img/e_A_FV.png){ loading=lazy }](https://eee1-uom5ariccq-ew.a.run.app/estudios/e_A_FV){ .md-button }
+  <iframe hidden src="https://eee1-uom5ariccq-ew.a.run.app/estudios/e_A_FV" > </iframe>
+
+
+??? Abstract "Informe Estimación del consumo"
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
 
 
 
@@ -814,3 +830,10 @@ facturas emitidas (esto es, se consideraría un recargo de -72% para lo facturad
 en las cuatro primeras facturas) y la facturación del último periodo considerando
 el porcentaje correspondiente a la duración real del contrato (63%) (véase
 Cuadro 16).
+
+
+## Referencias
+
+ [CNS/DE/1467/20: CONSULTAS VARIAS SOBRE LA IMPLEMENTACIÓN DE LA CIRCULAR 3/2020 DE 15 DE ENERO POR LA QUE SE ESTABLECE LA METODOLOGÍA PARA EL CÁLCULO DE LOS  PEAJES DE TRANSPORTE Y DISTRIBUCIÓN DE ELECTRICIDAD](https://www.cnmc.es/expedientes/cnsde146720) 
+
+
