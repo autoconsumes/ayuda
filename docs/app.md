@@ -4,7 +4,7 @@ La aplicacion genera informes de estudios predeterminados a partir de archivos e
 
 ​    
 
-??? "1.- Editar los parametros en el navegador"
+??? "1.- Editar los parametros en el navegador (disponible para Insiders )"
     ![e3_edicion_navegador](app.assets/e3_edicion_navegador.gif)
 
 

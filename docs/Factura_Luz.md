@@ -12,10 +12,7 @@
 	### Analisis curva de carga
     [![Placeholder](./img/e_A_CARGA.png){ loading=lazy }](https://eee1-uom5ariccq-ew.a.run.app/estudios/e_A_CARGA){ .md-button }
 
-
-
 ## 1. Objeto
-
 
 
 El Real Decreto-ley 1/2019, de 11 de enero 1 , modifica las competencias de la
@@ -41,7 +38,6 @@ A los efectos anteriores, para facilitar la compresión de todos los agentes, se
 procede en primer lugar, a enmarcar el contenido la Circular 3/2020 en el
 esquema general precios al que debe hacer frente un consumidor por el
 suministro de energía.
-
 
 
 ## 2. Peajes y cargos
