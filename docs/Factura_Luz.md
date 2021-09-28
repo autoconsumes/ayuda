@@ -2,21 +2,15 @@
 
 ## Informes
 
-??? Abstract "Informe Dimensionado del sistema"
-
-    [![Placeholder](./img/e_A_FV.png){ loading=lazy }](https://eee1-uom5ariccq-ew.a.run.app/estudios/e_A_FV){ .md-button }
+??? Abstract "Factura de la luz"
+	### Factura de la luz
+    [![Placeholder](./img/e_A_FACTURA.png){ loading=lazy }](https://eee1-uom5ariccq-ew.a.run.app/estudios/e_A_FACTURA){ .md-button }
   <iframe hidden src="https://eee1-uom5ariccq-ew.a.run.app/estudios/e_A_FV" > </iframe>
 
 
-??? Abstract "Informe Estimación del consumo"
-    ``` c
-    #include <stdio.h>
-
-    int main(void) {
-      printf("Hello world!\n");
-      return 0;
-    }
-    ```
+??? Abstract "Analisis curva de carga"
+	### Analisis curva de carga
+    [![Placeholder](./img/e_A_CARGA.png){ loading=lazy }](https://eee1-uom5ariccq-ew.a.run.app/estudios/e_A_CARGA){ .md-button }
 
 
 
